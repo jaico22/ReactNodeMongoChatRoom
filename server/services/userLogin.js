@@ -9,8 +9,18 @@ const {loginDb} = require('../db')
  * @param {string} username 
  * @param {string} password 
  */
-function userLogin(username, password){
+async function userLogin(username, password){
     // Doesn't do a whole lot... 
-    let loginSuccess = loginDb.loginDb(username,password)
+    var loginSuccess = false
+    try {
+        loginSuccess = await loginDb.loginDb(username,password)
+    } catch(e) {
+        console.log(e.message)
+        console.log('idk...')
+    }
     return loginSuccess
+}
+
+module.exports ={
+    userLogin
 }

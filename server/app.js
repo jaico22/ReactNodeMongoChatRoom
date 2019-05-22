@@ -12,7 +12,7 @@ app.get('/', (req, res) => res.send('App is owrking'))
 
 app.use('/api', routes)
 
-app.listen(5000, () => console.log('New servier is listening on port 5000'))
+app.listen(5000, () => console.log('New server is listening on port 5000'))
 
 module.exports = {
     app

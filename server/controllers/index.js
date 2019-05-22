@@ -1,3 +1,4 @@
 module.exports = { 
-    registerNewUser: require('./registerNewUser')
+    registerNewUser: require('./registerNewUser'),
+    userLoginCntrl: require('./userLoginCntrl')
 }
